@@ -1,1 +1,8 @@
-<h1> Schools Index</h1>
+<div id="schoolsIndexPage">
+  <h1>Schools Index</h1>
+  <ul>
+    <li ng-repeat="school in schoolsIndex.all">
+      <a ui-sref="schoolsShow({ id: school._id })">{{ school.name }}</a>
+    </li>
+  </ul>
+</div>
