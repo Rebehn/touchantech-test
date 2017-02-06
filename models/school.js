@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
 const schoolsSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  members: [{ type: mongoose.Schema.ObjectId, ref: 'Member' }]
+  name: { type: String, required: true }
 });
 
 module.exports = mongoose.model('School', schoolsSchema);
