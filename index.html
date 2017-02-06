@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="aaronsApp">
+<head>
+  <meta charset="utf-8">
+  <title>Aaron's app</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-resource/angular-resource.js"></script>
+  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../bower_components/satellizer/dist/satellizer.js"></script>
+  <script src="/js/app.js" charset="utf-8"></script>
+</head>
+<body>
+  <header class="container">
+    <nav id="navigation" class="navigation">
+      <ul>
+        <li><a ui-sref="schoolsIndex">Schools</a></li>
+        <li><a ui-sref="schoolsNew">New School</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container" ui-view></main>
+</body>
+</html>

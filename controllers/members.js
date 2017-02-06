@@ -7,10 +7,6 @@ function membersIndex(req, res) {
   });
 }
 
-function membersNew(req, res){
-  res.render('members/new');
-}
-
 function membersCreate(req, res) {
   Member.create(req.body, (err, member) => {
     if(err) return res.status(400).json({ error: err });
@@ -20,6 +16,5 @@ function membersCreate(req, res) {
 
 module.exports = {
   index: membersIndex,
-  new: membersNew,
   create: membersCreate
 };

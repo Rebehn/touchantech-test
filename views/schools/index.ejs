@@ -1,9 +1,0 @@
-<h1>All Schools</h1>
-<hr>
-<% schools.forEach((school) => { %>
-  <div class="profileBox">
-    <p class="schoolName"><a href="/schools/<%= school.id %>"><%= school.name %></a></p>
-    <p class="schoolNumberOfMembers"><%= school.members.length %></p>
-  </div>
-  <hr>
-<% }) %>
