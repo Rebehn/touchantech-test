@@ -1,10 +1,9 @@
 <div id="schoolsShowPage">
   <h1>{{ schoolsShow.school.name }}</h1>
-  <hr>
   <ul>
     <li ng-repeat="member in schoolsShow.school.members">
-      <p>{{ member.name }}</p>
-      <hr>
+      <h3>{{ member.name }}</h3>
+      <p>{{ member.emailAddress }}</p>
     </li>
   </ul>
 </div>

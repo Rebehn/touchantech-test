@@ -56,27 +56,63 @@ function SchoolsShowController(School, $state) {
 SchoolsNewController.$inject = ['School', '$state'];
 function SchoolsNewController(School, $state) {
   const schoolsNew = this;
-
   schoolsNew.school = {};
+  schoolsNew.submit = createSchool;
+
   function createSchool() {
     School.save(schoolsNew.school);
     $state.go('schoolsIndex');
   }
-
-  schoolsNew.submit = createSchool;
 }
 
-function MembersNewController(){
+MembersNewController.$inject = ['Member', 'School', '$state'];
+function MembersNewController(Member, School, $state){
+  const membersNew = this;
+  membersNew.allSchools = School.query();
+  membersNew.member = {};
+  membersNew.member.schools = []; //This is just the id's.
+  membersNew.schools = []; //This is the entire object.
+  membersNew.submit = createMember;
 
+  membersNew.toggleSelection = toggleSelection;
+
+  function toggleSelection(school) {
+    const index = membersNew.schools.indexOf(school);
+    if (index > -1) {
+      membersNew.schools.splice(index, 1);
+      membersNew.member.schools.splice(index, 1);
+    } else {
+      membersNew.schools.push(school);
+      membersNew.member.schools.push(school._id);
+    }
+  }
+
+  function createMember() {
+    Member.save(membersNew.member, (err, res) => {
+      for (let i=0; i<membersNew.schools.length; i++) {
+        membersNew.schools[i].members.push(res._id);
+        membersNew.schools[i].$update();
+      }
+    });
+    $state.go('schoolsIndex');
+  }
 }
 
 //MODELS
 angular.module('myApp')
-  .factory('School', School);
+  .factory('School', School)
+  .factory('Member', Member);
 
 School.$inject = ['$resource'];
 function School($resource) {
   return new $resource('/schools/:id', { id: '@_id' }, {
+    update: { method: 'PUT' }
+  });
+}
+
+Member.$inject = ['$resource'];
+function Member($resource) {
+  return new $resource('/members/:id', { id: '@_id' }, {
     update: { method: 'PUT' }
   });
 }

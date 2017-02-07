@@ -1,1 +1,19 @@
-<h1>New Member</h1>
+<div id="membersNewPage">
+  <h1>New Member</h1>
+  <form ng-submit="membersNew.submit()">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" ng-model="membersNew.member.name">
+    </div>
+    <div>
+      <label for="name">Email</label>
+      <input type="text" id="name" name="name" ng-model="membersNew.member.emailAddress">
+    </div>
+    <div class="container">
+      <label ng-repeat="school in membersNew.allSchools">
+        <input type="checkbox" name="selectedSchools[]" value="{{ school.name }}" ng-checked="selection.indexOf(school) > -1" ng-click="membersNew.toggleSelection(school)">{{ school.name }}<br>
+      </label>
+    </div>
+    <button>Add!</button>
+  </form>
+</div>

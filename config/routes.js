@@ -13,6 +13,7 @@ router.route('/schools')
   .post(schoolsController.create);
 
 router.route('/schools/:id')
-  .get(schoolsController.show);
+  .get(schoolsController.show)
+  .put(schoolsController.update);
 
 module.exports = router;

@@ -1,0 +1,226 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*END OF RESET CSS*/
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+#landing h1 {
+  text-align: center;
+  margin: 15% auto;
+  font-size: 200px;
+}
+
+nav {
+  background-color: lightgrey;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #D62246;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a:hover {
+  background-color: #333;
+  color: white;
+}
+
+#schoolsIndexPage h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 30px auto;
+}
+
+#schoolsIndexPage ul li {
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+#schoolsIndexPage ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#schoolsIndexPage ul li a:hover {
+  color: #D62246;
+}
+
+#schoolsNewPage h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 30px auto;
+}
+
+#schoolsNewPage form {
+  font-size: 24px;
+}
+
+#schoolsNewPage form label {
+  margin-right: 10px;
+}
+
+#schoolsNewPage form div {
+  display: inline-block;
+  padding: 40px 0 40px 30%;
+}
+
+#schoolsNewPage form div input {
+  width: 400px;
+  font-size: 18px;
+  line-height: 23px;
+  border: none;
+  color: #D62246;
+  -webkit-text-fill-color: black;
+  border-bottom: 1px black solid;
+}
+
+#schoolsNewPage form div input:focus {
+  border-bottom: 1px #D62246 solid;
+}
+
+#schoolsNewPage form button {
+  display: inline-block;
+  background-color: #D62246;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px 9px;
+}
+
+#membersNewPage h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 30px auto;
+}
+
+#membersNewPage form {
+  font-size: 24px;
+}
+
+#membersNewPage form label {
+  margin-right: 10px;
+}
+
+#membersNewPage form div {
+  display: inline-block;
+  padding: 40px 0 10px 30%;
+}
+
+#membersNewPage form div input[type="text"] {
+  width: 400px;
+  font-size: 18px;
+  line-height: 23px;
+  border: none;
+  color: #D62246;
+  -webkit-text-fill-color: black;
+  border-bottom: 1px black solid;
+}
+
+#membersNewPage form div input:focus {
+  border-bottom: 1px #D62246 solid;
+}
+
+#membersNewPage form button {
+  background-color: #D62246;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px 9px;
+  display: block;
+  margin: 0 auto;
+}
+
+#schoolsShowPage h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 30px;
+}
+
+#schoolsShowPage ul {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#schoolsShowPage ul li {
+  width: 20%;
+  display: inline-block;
+}
+
+#schoolsShowPage h3 {
+  font-size: 20px;
+}
+
+#schoolsShowPage p {
+  font-size: 12px;
+  margin: 2px 0 20px 0;
+  color: grey;
+}
