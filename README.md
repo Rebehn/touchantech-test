@@ -7,8 +7,8 @@
 - Express
 - AngularJS
 - Node.js
-###Using
-To get started:
+
+###To get started:
 ```
 $ git clone git@github.com:Rebehn/firmstep-test.git
 $ cd firmstep-test
