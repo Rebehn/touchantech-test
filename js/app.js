@@ -88,9 +88,11 @@ function MembersNewController(Member, School, $state){
   }
 
   function createMember() {
-    Member.save(membersNew.member, (err, res) => {
+    console.log(membersNew.member);
+    Member.save(membersNew.member, (req) => {
+      console.log(req);
       for (let i=0; i<membersNew.schools.length; i++) {
-        membersNew.schools[i].members.push(res._id);
+        membersNew.schools[i].members.push(req._id);
         membersNew.schools[i].$update();
       }
     });
